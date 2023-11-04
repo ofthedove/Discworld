@@ -7,13 +7,79 @@ flowchart LR
     in([Illustrated Novel])
     ss{{Short Story}}
     sn[/Science Novel/]
+    ya[[Young Adult]]
     end
 
+    O9([Nanny Ogg's Cookbook])
+    O10{{The Sea and Little Fishes}}
+
+    subgraph Witches
+        Wt1["`Equal
+        Rites`"] -->
+
+        Wt2["`Wyrd
+        Sisters`"] -->
+
+        Wt3["`Witches
+        Abroad`"] -->
+
+        Wt4["`Lords
+        and Ladies`"] -->
+
+        Wt5["`Maskerade`"] -->
+
+        Wt6["`Carpe
+        Jugulum`"]
+    end
+
+    O9 --> Wt5
+    Wt5 -.-> O10
+    O10 -.-> Wt6
+
+    subgraph Ancient Civilizations
+        AC1[Pyramids] -.->
+        AC2[Small Gods]
+    end
+
+    subgraph Tiffany Aching
+        TA1[["`The Wee
+        Free Men`"]] -->
+
+        TA2[["`A Hat
+        Full of
+        Sky`"]] -->
+
+        TA3[["`Wintersmith`"]] -->
+
+        TA4[["`I Shall
+        Wear
+        Midnight`"]] -->
+
+        TA5[["`The Shepherd's
+        Crown`"]]
+    end
+
+    W6 -.-> TA1
+
+    O6{{"`Death
+    and What
+    Comes Next`"}}
+
+    AC1 -.-> O6 -.-> AC2
+
+    O8[["`The Amazing
+    Mauricce and
+    his Educated
+    Rodents`"]]
+
+    O8 -.-> TA1
 
     subgraph Death
     direction LR
     D1[Mort] --> D2[Reaper Man] --> D3[Soul Music] --> D4[Hogfather] -.-> D5[Thief of Time]
     end
+
+    AC2 -.History Monks.-> D5
 
     subgraph Watch
     direction LR
@@ -38,6 +104,8 @@ flowchart LR
 
         W8[Snuff]
     end
+
+    D5 -.Path.-> W6
 
     subgraph Industrial Revolution
     direction LR
@@ -138,4 +206,6 @@ flowchart LR
     of Poo`"])
     
     O3 --> W7 -.-> O4 -.-> W8 --> O5
+
+
 ```
